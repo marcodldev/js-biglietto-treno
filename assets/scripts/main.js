@@ -29,8 +29,17 @@ console.log(prezzo)
 
     //   CONDIZIONI 
 
+    if (eta < 18) {
 
+    var prezzo = prezzo - sconto20;
+  
 
+    } else if  (eta > 65) {
+    var prezzo = prezzo - sconto40;
 
-    
+    } else {
+    var prezzo = prezzo;
+    }
+
+    document.getElementById("biglietto").innerHTML= `Il prezzo del biglietto è: ${prezzo.toFixed(2)} Euro`;
 
